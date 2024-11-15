@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #FFD700;
+            transition: width 0.3s;
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            width: 240px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .product:hover img {
+            transform: scale(1.05);
+        }
+        .product h3 {
+            color: #4CAF50;
+        }
+        .product p {
+            color: #666;
+        }
+        .product button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My E-Commerce Store</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#product">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Featured Products</h2>
+    <div id="product" class="product-container">
+        <div class="product">
+            <img src="https://imgs.search.brave.com/DoKDKYsZV08RMl1n7nqaFOofAsYkbrxFIa8l3fj2GoI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS53aXJlZC5jb20v/cGhvdG9zLzYzZTY5/ZDE1MjVjMzZlODY2/NDhjMWQ4Ni9tYXN0/ZXIvd18zMjAsY19s/aW1pdC9Gb2NhbC1C/YXRoeXMtV2lyZWxl/c3MtSGVhZHBob25l/cy1HZWFyLmpwZw" alt="Product 1">
+            <h3>Wireless Headphones</h3>
+            <p>High-quality wireless headphones with noise cancellation.</p>
+            <p>Price: $99.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/cHAhX_k2xjG2FFR1oAxnr1NOPM_fYyTHkzocqffiDgc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0LzM5LzY4LzQ1/LzM2MF9GXzQzOTY4/NDUyMF95OGh1QUlN/SGxocTI5dE1SN09F/ZmdhcVVObnJjelVk/by5qcGc" alt="Product 2">
+            <h3>Smartphone</h3>
+            <p>Latest smartphone with advanced features and sleek design.</p>
+            <p>Price: $699.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/UUGD8oWBO2uVd6TAT1Ow9BwPP2k0aB14RvgFevO7D34/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA2LzA3LzE5LzM5/LzM2MF9GXzYwNzE5/MzkwMV9nNzgwSU5r/WWtOa21UZnA4aUV3/Qk1XSkVvQ2ZrZXhk/VS5qcGc" alt="Product 3">
+            <h3>Smartwatch</h3>
+            <p>Stylish smartwatch with fitness tracking and notifications.</p>
+            <p>Price: $199.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/aT54giGFbLjK1Cp46tp-Zkj43vhKe4AQN-vJLysXhPs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzg2/ZTFhNWExLWIwZmQt/NGI2NS1iZjI3LTg5/MDE0Yzc0ODUxYi5f/X0NSMCwwLDk3MCw2/MDBfUFQwX1NYOTcw/X1YxX19fLmpwZw" alt="Product 4">
+            <h3>Laptop</h3>
+            <p>Powerful laptop for work and play with high performance.</p>
+            <p>Price: $999.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/Mz7SWvZW0qxXPWdNMlmFW_zoe1QO4V27M_axdP63kBI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3RmYXNzZXRz/Lm5ldC9qYXZlbjdt/c2FiZGgvNVozemdh/bVBtVGszM1N2ZVhL/dVFsSy9hYzIyZTdm/MmFkOTI1OTg3YTRm/NWU3NDcxMDVhNjg3/NC9taWRkbGV0b24t/YmxhY2stcGxwLmpw/Zw" alt="Product 5">
+            <h3>Bluetooth Speaker</h3>
+            <p>Portable Bluetooth speaker with excellent sound quality.</p>
+            <p>Price: $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/tDc5bKAuh5BXASZEPplcGZelB3t97lovIUrOkjg8HV0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAwLzUyLzQ1LzMy/LzM2MF9GXzUyNDUz/MjkzX3FHQ1JGZGY2/bkVrQ0xqQnVSSUhR/SVFNT09hWW1nTnBO/LmpwZw" alt="Product 6">
+            <h3>Camera</h3>
+            <p>High-resolution camera for stunning photography.</p>
+            <p>Price: $499.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/6Q94gsJRL_DrBpC2m4WRAORz6yRTwV0nTzwTDDDoLds/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFxUzVyQVpuTkwu/anBn" alt="Product 7">
+            <h3>Gaming Mouse</h3>
+            <p>High precision gaming mouse with customizable buttons.</p>
+            <p>Price: $59.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/RoT-uYQTQgihAlw2TE7T8UfE4ZWQr84WpPFu-9wwQ3A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5saWNkbi5jb20v/ZG1zL2ltYWdlL0Q0/RDEyQVFISlhUajly/SjRHdFEvYXJ0aWNs/ZS1jb3Zlcl9pbWFn/ZS1zaHJpbmtfNjAw/XzIwMDAvMC8xNzAy/OTA0NzE5MjU4P2U9/MjE0NzQ4MzY0NyZ2/PWJldGEmdD0wbWZM/WXpKenlxb0pJbXN0/WDRXUnUwaHExaFBo/TjFKTFgtN05fRlNQ/UjlJ.jpeg" alt="Product 8">
+            <h3>Mechanical Keyboard</h3>
+            <p>Durable mechanical keyboard with RGB lighting.</p>
+            <p>Price: $89.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/uD5w8gmzbYz2yaEog_36hg7Xl46WfY8Eol0P_qzwoAw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTF0MTYrZzI5S0wu/anBn" alt="Product 9">
+            <h3>4K Monitor</h3>
+            <p>Ultra HD monitor for stunning visuals and gaming.</p>
+            <p>Price: $399.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://imgs.search.brave.com/6a5pBClZai6_IY3xPguMpxX_mzLFIjREesm-pjzr8mI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9iMmMt/Y29udGVudGh1Yi5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDUvU2F0ZWNo/aS0zLWluLTEtZm9s/ZGFibGUtUWkyLUNo/YXJnaW5nLVN0YW5k/X2JhY2std2F0Y2gt/aXBob25lLWFpcnBv/ZHMuanBnP3F1YWxp/dHk9NTAmc3RyaXA9/YWxs" alt="Product 10">
+            <h3>Wireless Charger</h3>
+            <p>Fast wireless charger for compatible devices.</p>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us:</p>
+        <p>Email: support@myecommercestore.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 E-Commerce St, Shop City, ST 12345</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 My E-Commerce Store</p>
+</footer>
+
+</body>
+</html>
